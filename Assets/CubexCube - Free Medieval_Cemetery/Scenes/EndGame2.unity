@@ -10700,6 +10700,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5641796025853051121, guid: 5b57e78381ff9df4185b4c2d67dbeb63, type: 3}
+      propertyPath: m_text
+      value: PLAYER 2 WINS
+      objectReference: {fileID: 0}
     - target: {fileID: 6689024361795585418, guid: 5b57e78381ff9df4185b4c2d67dbeb63, type: 3}
       propertyPath: m_Name
       value: Canvas

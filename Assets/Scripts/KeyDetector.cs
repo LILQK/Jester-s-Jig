@@ -37,7 +37,7 @@ public class KeyDetector : MonoBehaviour
 
     private void onNoteDespawn(GameObject n)
     {
-        score.score = score.score - 1;
+        score.RemoveScore();
         keys.Remove(n.transform);
     }
 
@@ -64,7 +64,7 @@ public class KeyDetector : MonoBehaviour
             if (k != null)
             {
                 audioSource.PlayOneShot(succesClip);
-                score.score = score.score + 1;
+                score.AddScore();
                 keys.Remove(k);
                 k.GetComponent<NoteMovement>().particle.Play();
                 k.GetComponent<NoteMovement>().particle.transform.parent = null;
@@ -72,7 +72,7 @@ public class KeyDetector : MonoBehaviour
             }
             else {
                 audioSource.PlayOneShot(wrongClip);
-                score.score = score.score - 1;
+                score.RemoveScore();
             }
         }
     }
@@ -83,7 +83,6 @@ public class KeyDetector : MonoBehaviour
             float d = GetDistanceWithKey(t.position);
             if (d <= 1f) {
                 return t;
-            
             }
         }
         return null;

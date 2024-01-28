@@ -72,10 +72,10 @@ public class GameManager : MonoBehaviour
     public void EndGame(int lost = 0) {
         if (lost == 0)
         {
-            SceneManager.LoadScene("EndGame1");
+            SceneManager.LoadScene("EndGame2");
         }
         else {
-            SceneManager.LoadScene("EndGame2");
+            SceneManager.LoadScene("EndGame1");
         }
     }
 }
